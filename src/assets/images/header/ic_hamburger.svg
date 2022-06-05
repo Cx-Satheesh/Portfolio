@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_5083" data-name="Rectangle 5083" width="16" height="16" transform="translate(652 472)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="ic_hamburger" transform="translate(-652 -472)" clip-path="url(#clip-path)">
+    <g id="Page-1" transform="translate(652 472.381)">
+      <g id="Dribbble-Light-Preview" transform="translate(0 0)">
+        <g id="icons">
+          <path id="menu_navigation_grid-_1529_" data-name="menu_navigation_grid-[#1529]" d="M62.743,54.1h-2.4a2.345,2.345,0,0,0-2.4,2.286v2.286a2.345,2.345,0,0,0,2.4,2.286h2.4a2.345,2.345,0,0,0,2.4-2.286V56.381a2.345,2.345,0,0,0-2.4-2.286m-8.8,0h-2.4a2.345,2.345,0,0,0-2.4,2.286v2.286a2.345,2.345,0,0,0,2.4,2.286h2.4a2.345,2.345,0,0,0,2.4-2.286V56.381a2.345,2.345,0,0,0-2.4-2.286m8.8-8.381h-2.4A2.345,2.345,0,0,0,57.943,48v2.286a2.345,2.345,0,0,0,2.4,2.286h2.4a2.345,2.345,0,0,0,2.4-2.286V48a2.345,2.345,0,0,0-2.4-2.286M56.343,48v2.286a2.345,2.345,0,0,1-2.4,2.286h-2.4a2.345,2.345,0,0,1-2.4-2.286V48a2.345,2.345,0,0,1,2.4-2.286h2.4A2.345,2.345,0,0,1,56.343,48" transform="translate(-49.143 -45.714)" fill="#fff" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------------
+                                Colors
+--------------------------------------------------------------------*/
+$colors: (
+    primary:linear-gradient(to right, #5650BF, #9EA1F6),
+    bg: #212428,
+    secondary:#9EA1F6,
+    purple:#5650BF,
+    darkGrey:#212428,
+    mediumGrey:#797C8A,
+    lightGrey:#B4B9CF,
+    filter:rgba(63, 85, 95, .75),
+    white:#ffffff,
+    whitemedium:rgba(255,255,255, .65),
+    whiteregular:rgba(255,255,255, .35),
+    whitelight:rgba(255,255,255, .1),
+    lightBg:#f7f7f7
+);
+
+@function color($colorName){
+    @return map-get($colors, $colorName)
+};

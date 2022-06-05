@@ -1,0 +1,89 @@
+/* ------------------------------------------------------------------
+                           Imports
+--------------------------------------------------------------------*/
+@import "src/variables.scss";
+
+
+/* ------------------------------------------------------------------
+                               Styles
+--------------------------------------------------------------------*/
+.cx-portfolio-wrapper{
+   position: relative;
+   padding:70px;
+   height:100vh;
+}
+.cx-content-wrapper{
+    overflow-x: scroll;
+}
+.cx-pbottom-nav{
+    background-color: color(bg);
+    position: fixed;
+    bottom:0;
+    width:calc(100vw - 140px);
+    left:0;
+    right:0;
+    margin:auto;
+    height:70px;
+
+    .cx-pmenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li{
+            display:inline-block;
+            padding:0 30px;
+            margin:0 30px;
+            position: relative;
+
+            a{
+                display: block;
+                color:color(whiteregular);
+                height:70px;
+                line-height: 70px;
+                cursor: pointer;
+            }    
+
+            &.cx-pactive a{
+                color: color(white);
+            }
+
+            &::before{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width:0;
+                height:3px;
+                background-color: color(secondary);
+                border-radius:50px;
+                transition: all .2s;
+            }
+
+            &.cx-pactive{
+                position: relative;
+
+                &::before{
+                    width:100%
+                }
+
+            }
+
+            &:hover a{
+                color: color(white);
+            }
+            
+
+        }
+
+    }
+
+}
+
+.cx-content-wrapper{
+    height:100%;
+
+    .cx-content{
+        height:100%;
+    }
+}

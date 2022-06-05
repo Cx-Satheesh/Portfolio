@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------------
+                           Imports
+--------------------------------------------------------------------*/
+@import "src/variables.scss";
+
+
+/* ------------------------------------------------------------------
+                           Mixins
+--------------------------------------------------------------------*/
+$desktopSmall : 1600px;
+$desktopHD : 1350px;
+
+@mixin desktopSmall{
+    @media(max-width: #{$desktopSmall}){
+        @content;
+    }
+}
+@mixin desktopHD{
+    @media(max-width: #{$desktopHD}){
+        @content;
+    }
+}
+
+/* ------------------------------------------------------------------
+                               Styles
+--------------------------------------------------------------------*/
+.cx-social{
+    position:fixed;
+    top:0;
+    right:0;
+    background-color: color(darkGrey);
+    width:70px;
+    height:100%;
+
+    @include desktopHD{
+        display:none;
+    }
+
+}

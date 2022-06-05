@@ -1,0 +1,314 @@
+
+ /* ------------------------------------------------------------------
+                           Imports
+--------------------------------------------------------------------*/
+@import "src/variables.scss";
+ 
+
+
+ /* ------------------------------------------------------------------
+                           Resume Layout
+--------------------------------------------------------------------*/
+ #cx-timeline {
+    display: flex;
+    background-color: #cfd0fb;
+    margin:70px;
+    margin-bottom:0;
+  
+    &:hover {
+      .cx-timeline-item {
+        width: 23.3333%;
+      }
+    }
+  }
+  
+  .cx-timeline-item {
+    position: relative;
+    width: 25%;
+    height: calc(100vh - 70px);
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    padding:50px;
+    background-color: #4f517b;
+   
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50%; 
+      height: 100%;
+      transition: all .5s;
+      z-index: 1000;
+    }
+
+    &:before{
+      left:0;
+    }
+
+    &:after{
+      right:0;
+    }
+
+    &:nth-child(1){
+      &:before, &:after {
+        background-color: #ececfd;
+      }
+    }
+    &:nth-child(2){
+      &:before, &:after {
+        background-color: #e2e3fc;
+      }
+    }
+    &:nth-child(3){
+      &:before, &:after {
+        background-color: #cfd0fb;
+      }
+    }
+    &:nth-child(4){
+
+      &:before, &:after {
+        background-color: #c5c7fa;
+      }
+    }
+
+
+
+
+   
+
+  
+    &:hover {
+      width: 30% !important;
+      
+      &:nth-child(1){
+        &:before{
+          left:-50%;
+        }
+  
+        &:after{
+          right:-50%;
+        }
+      }
+
+      &:nth-child(2){
+        &:before{
+          left:-50%;
+        }
+  
+        &:after{
+          right:-50%;
+        }
+      }
+
+      &:nth-child(3){
+        &:before{
+          left:-50%;
+        }
+  
+        &:after{
+          right:-50%;
+        }
+      }
+
+      &:nth-child(4){
+        &:before{
+          left:-50%;
+        }
+  
+        &:after{
+          right:-50%;
+        }
+      }
+      
+
+      .cx-timeline-content {
+        max-height: 700px;
+      }
+  
+      .cx-timeline-bg {
+        filter: grayscale(0);
+      }
+    }
+  }
+  
+  .cx-timeline-content {
+    width:100%;
+    max-height:0;
+    transition: all 0.5s;
+    
+    h1 {
+      text-transform: uppercase;
+      color: #1779cf;
+      font-size: 1.44rem;
+      font-weight: normal;
+    }
+  }
+  
+  .cx-timeline-title {
+    z-index: 1001;
+    background:#4f517b;
+    margin-bottom:50px;
+    
+    
+    .cx-title-graphic{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height:48px;
+      width:150px;
+
+      &::after{
+        content:'';
+        position:absolute;
+        top:-2px;
+        left:-35%;
+        width:100%;
+        height:3px;
+        background-image:linear-gradient(to right, transparent, #a8aaf7);
+      }
+      &::before{
+        content:'';
+        position:absolute;
+        bottom:-2px;
+        right:-35%;
+        width:100%;
+        height:3px;
+        background-image:linear-gradient(to right, #a8aaf7, transparent);
+      }
+
+      h4{
+        margin:0;
+        font-size: 14px;
+        text-transform: uppercase;
+        position:relative;
+        top:3px;
+      }
+
+    }
+
+   
+
+  }
+  
+  .cx-timeline-bg {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background-size: cover;
+    background-position: center center;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%);
+  }
+  
+  
+  
+/* ------------------------------------------------------------------
+                          Experience Content
+--------------------------------------------------------------------*/
+.cx-exp-timeline{
+  width:100%;
+
+  li{
+    margin-bottom:30px;
+    padding-left:30px;
+
+    p{
+      margin-bottom:0;
+    }
+
+  }
+
+  .cx-exp{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5px;
+
+    .cx-years{
+      font-size:12px;
+      opacity:.75;
+    }
+
+  }
+
+}
+
+/* ------------------------------------------------------------------
+                          Skill Level Content
+--------------------------------------------------------------------*/
+.cx-skills{
+
+  li{
+    padding:15px;
+    background:#5f6194;
+    margin-bottom:20px;
+
+    .cx-progress-bar{
+      width:100%;
+      background:rgba(255,255,255,.15);
+      height:5px;
+      border-radius:50px;
+      margin-top:10px;
+      position: relative;
+
+      &::before{
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width:0;
+        height:5px;
+        background-color:color(whitemedium);
+        border-radius: 50px;
+        z-index:900;
+      }
+
+    }
+
+
+    &:nth-child(1){
+      .cx-progress-bar::before{
+        width:80%;
+      }
+    }
+
+    &:nth-child(2){
+      .cx-progress-bar::before{
+        width:100%;
+      }
+    }
+
+    &:nth-child(3){
+      .cx-progress-bar::before{
+        width:40%;
+      }
+    }
+
+    .cx-skill-texts{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      label{
+        text-transform: uppercase;
+        font-size:12px;
+      }
+
+      span{
+        font-size:12px;
+        text-transform: uppercase;
+        color:#e2e3fc;
+      }
+
+    }
+
+  }
+
+}

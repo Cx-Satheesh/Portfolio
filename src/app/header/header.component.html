@@ -1,0 +1,32 @@
+<header class="cx-header">
+    <a routerLink="/" routerLinkActive="cx-active" class="cx-ic-home"><img  src="../../assets/images/header/ic_home.svg" alt="home-icon" /></a>
+    <div class="cx-ham" #cxCursor (click) = "onClick()">
+        <button type="button" class="cx-ham-btn"><img  src="../../assets/images/header/ic_hamburger.svg" alt="home-icon" /></button>
+    </div>
+    <ul class="cx-navList" #menu [ngClass] = "{cxHamActive : cxActive}">
+        <li>
+            <a routerLink="/portfolio" routerLinkActive="cx-active">Portfolio</a>
+        </li>
+        <li>
+            <a routerLink="/clients" routerLinkActive="cx-active">Clients</a>
+        </li>
+        <li>
+            <a routerLink="/resume" routerLinkActive="cx-active">Resume</a>
+        </li>
+    </ul>
+
+    <div class="cx-header-elements">
+        <div class="cx-ms-header">
+            <h4>About Me</h4>
+        </div>
+        <div class="cx-ms-elements">
+            <div class="cx-ms-elin">
+                
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+

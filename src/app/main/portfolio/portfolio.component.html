@@ -1,0 +1,30 @@
+<div class="cx-portfolio-wrapper">
+    <nav class="cx-pbottom-nav">
+        <ul class="cx-pmenu">
+            <li [class.cx-pactive] = "id === 'mobile'"><a id="mobile"  (click) = "tabChange('mobile')">Mobile UI/UX</a></li>
+            <li [class.cx-pactive] = "id === 'web'" ><a id="web" (click) = "tabChange('web')">Web UI/UX</a></li>
+            <li [class.cx-pactive] = "id === 'illustrations'"><a id="illustrations"  (click) = "tabChange('illustrations')">Illustrations</a></li>
+            <li [class.cx-pactive] = "id === 'logo'"><a id="logo"  (click) = "tabChange('logo')">Logo Design</a></li>
+            <li [class.cx-pactive] = "id === 'frontend'"><a id="frontend"  (click) = "tabChange('frontend')">Web Front End</a></li>
+        </ul>
+    </nav>
+
+    <div class="cx-content-wrapper" appHorizontalScroll>
+        <div class="cx-content" *ngIf = "id === 'mobile'">
+            <app-projects></app-projects>
+        </div>
+        <div class="cx-content" *ngIf = "id === 'web'">
+            <p>I am Working Web!</p>
+        </div>
+        <div class="cx-content" *ngIf = "id === 'illustrations'">
+            <p>I am Working Illustration!</p>
+        </div>
+        <div class="cx-content" *ngIf = "id === 'logo'">
+            <p>I am Working Logo!</p>
+        </div>
+        <div class="cx-content" *ngIf = "id === 'frontend'">
+            <p>I am Working Frontent!</p>
+        </div>
+    </div>
+
+</div>

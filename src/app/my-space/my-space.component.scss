@@ -1,0 +1,215 @@
+/* ------------------------------------------------------------------
+                           Imports
+--------------------------------------------------------------------*/
+@import "src/variables.scss";
+
+
+
+/* ------------------------------------------------------------------
+                           Mixins
+--------------------------------------------------------------------*/
+
+$desktopSmall : 1600px;
+$desktopHD : 1350px;
+
+@mixin desktopSmall{
+    @media(max-width: #{$desktopSmall}){
+        @content;
+    }
+}
+@mixin desktopHD{
+    @media(max-width: #{$desktopHD}){
+        @content;
+    }
+}
+
+/* ------------------------------------------------------------------
+                           Styles
+--------------------------------------------------------------------*/
+.cx-myspace{
+    position:fixed;
+    top:0;
+    left:0;
+    width:600px;
+    height:100%;
+    background-image: url('../../assets/images/home/profile.jpg');
+    background-position: center;
+    background-size: cover;
+
+    @include desktopSmall{
+        width:500px;
+    }
+    @include desktopHD{
+        width:100%;
+        position: relative;
+        z-index:1001;
+        height:350px;
+    }
+
+    .cx-ms-container{
+        position: relative;
+        height:100%;
+    }
+
+    .cx-filter{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:color(filter);
+        z-index:1001;
+    }
+
+    
+
+    .cx-ms-details{
+        position:absolute;
+        bottom:60px;
+        left:70px;
+        padding:30px;
+        z-index:1002;
+
+        @include desktopHD{
+            position: relative;
+            top:0;
+            left:0;
+            bottom:unset;
+        }
+
+        h1{
+            font-size:40px;
+            color:color(white);
+
+            span{
+                color:color(secondary);
+            }
+
+        }
+
+        > span{
+            color:color(white);
+            font-size:30px;
+            margin-right:10px;
+        }
+
+        h2{
+            -webkit-text-stroke:.25px color(whitemedium);
+            color:transparent;
+            margin-bottom:20px;
+            font-size:30px;
+            position: relative;
+            text-transform: uppercase;
+            display: inline-block;
+            letter-spacing: 2px;
+
+            &::before{
+                content:attr(data-text);
+                position: absolute;
+                top:0;
+                left:0;
+                width:0;
+                height:100%;
+                color:color(white);
+                -webkit-text-stroke:0px color(whitemedium);
+                overflow: hidden;
+                animation: animate 4s linear infinite;
+            }
+
+            &::after{
+                content:'';
+                position: absolute;
+                top:-3px;
+                left:0;
+                width:2px;
+                height:100%;
+                background:color(white);
+                -webkit-text-stroke:0px color(whitemedium);
+                border-right:2px solid color(white);
+                overflow: hidden;
+                animation: animateLine 4s linear infinite;
+            }
+
+        }
+
+        p{
+            font-size:14px;
+            color:color(white);
+            margin-bottom:75px;
+
+            @include desktopHD{
+                margin-bottom:50px;
+            }
+
+        }
+
+        .cx-ms-social{
+
+            label{
+                font-size: 12px;
+                text-transform: uppercase;
+                color:color(white);
+                font-weight:700;
+            }
+            
+            ul{
+                li{
+                    
+                    border-radius:5px;
+                    background-color: color(whitelight);
+                    display: inline-block;
+                    margin:15px 10px;
+            
+                    a{
+                        border-radius:5px;
+                        height:36px;
+                        width:36px;
+                        line-height: 38px;
+                        text-align: center;
+                        color:color(white);
+                        cursor:pointer;
+                        display: block;
+                        box-shadow: inset 0 0 0 0 color(secondary);
+                        transition:all .75s;
+
+                        
+                        
+                        &:hover{
+                            box-shadow: inset 0 0 50px 0 color(secondary);
+                            color:color(white);
+                        }
+
+                        i{
+                            font-size: 12px;
+                        }
+                    }
+                    &:nth-child(1){
+                        margin-left: 0;
+                    }     
+                }
+            }
+
+
+        }
+
+    }
+}
+
+
+@keyframes animate {
+    0%, 10%, 100%{
+        width:0%;
+    }
+    70%, 90%{
+        width:100%;
+    }
+}
+
+@keyframes animateLine {
+    0%, 10%, 100%{
+        left:0%;
+    }
+    70%, 90%{
+        left:100%;
+    }
+}
